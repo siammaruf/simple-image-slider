@@ -5,9 +5,9 @@
  * Plugin URI: https://cofixer.com/simple-image-slider
  * Author: Siam Maruf
  * Author URI: https://siammaruf.com
- * Version: 1.0
- * License: GPL2 or later
- * License URI: https://www.gnu.org/licenses/gpl-2.0.html
+ * Version: 1.0.0
+ * License: GPL3 or later
+ * License URI: https://www.gnu.org/licenses/gpl-3.0.html
  * Text Domain: kcs
  */
 
