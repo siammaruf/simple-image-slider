@@ -31,9 +31,13 @@ $ npm run dev / npm run watch / npm run build
 - [laravel-mix 6](https://laravel-mix.com/docs/6.0/upgrade)
 - [SASS](https://www.npmjs.com/package/sass)
 <br>
+
 ## 🤝 Contribute
+
 If you want to contribute to this app, you're always welcome!
 See [Contributing Guidelines](https://github.com/G3root/readme-generator/blob/master/CONTRIBUTING.md).
+
 ## 📩 Contact
+
 I know that first and foremost you are looking for a tool to solve your problems, but if you enjoy
 it that much, why not tell me? I would love to hear from you 😉
