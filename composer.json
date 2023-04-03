@@ -1,0 +1,20 @@
+{
+    "name": "siam/simple-image-slider",
+    "description": "This is a simple WordPress plugin for manage and create image slider",
+    "type": "wordpress-plugin",
+    "license": "GPLv3",
+    "authors": [
+        {
+            "name": "Md Siam Maruf",
+            "email": "siam.maruf1@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Cofixer\\KC\\Slider\\": "includes/"
+        },
+        "files": [ "includes/functions.php" ]
+    }
+}
