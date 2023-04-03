@@ -1,8 +1,8 @@
-![GitHub pull requests](https://img.shields.io/github/issues-pr/siammaruf/simple-image-slider)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/siammaruf/wp-simple-image-slider)
 
-![GitHub stars](https://img.shields.io/github/stars/siammaruf/simple-image-slider?style=social)
-![GitHub stars](https://img.shields.io/github/forks/siammaruf/simple-image-slider?style=social)
-![GitHub stars](https://img.shields.io/github/watchers/siammaruf/simple-image-slider?style=social)
+![GitHub stars](https://img.shields.io/github/stars/siammaruf/wp-simple-image-slider?style=social)
+![GitHub stars](https://img.shields.io/github/forks/siammaruf/wp-simple-image-slider?style=social)
+![GitHub stars](https://img.shields.io/github/watchers/siammaruf/wp-simple-image-slider?style=social)
 ![GitHub follow](https://img.shields.io/github/followers/siammaruf?label=Follow&style=social)
 ## 🗎 Simple Image Slider ( WordPress Plugin )
 This is a simple WordPress plugin for manage and create image slider. I am continuing to work on it to make it better. I always consider myself a learner. So, feel free to suggest me any better idea to move forward in my career
