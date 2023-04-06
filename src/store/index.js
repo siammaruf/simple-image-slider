@@ -1,23 +1,10 @@
 import {createStore} from "vuex";
-
-import { actions } from "./actions.js";
-import { mutations } from "./mutations.js";
-import { getters } from "./getters.js";
+import sliderModule from "./modules/sliderModule";
 
 const store = createStore({
-    state:{
-        settings:{
-            general:{
-                firstname: '',
-                lastname: '',
-                email: ''
-            }
-        },
-        loadingText: "Save Settings",
-    },
-    actions,
-    mutations,
-    getters
+    modules:{
+        sliderMod: sliderModule
+    }
 });
 
 export default store;

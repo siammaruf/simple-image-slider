@@ -1,5 +1,5 @@
 <template>
-  <div id="vue-admin-app">
+  <div id="kcs-about-page">
     <h1>Wordpress Vue About Page</h1>
   </div>
 </template>

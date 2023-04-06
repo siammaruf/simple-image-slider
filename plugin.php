@@ -20,6 +20,8 @@ require __DIR__.'/vendor/autoload.php';
 use Cofixer\KC\Slider\Admin;
 use Cofixer\KC\Slider\Api;
 use Cofixer\KC\Slider\Installer;
+use Cofixer\KC\Slider\PostTypes;
+use Cofixer\KC\Slider\Shortcodes;
 
 /*
  * Main Plugin Class
@@ -79,6 +81,8 @@ final class CofixerSimpleSliderPlugin{
 			new Admin();
 		}
 		new Api();
+		new PostTypes();
+		new Shortcodes();
 	}
 
 	/**

@@ -6,7 +6,7 @@
  * or disable the default devtool with "devtool: false".
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
-(self["webpackChunkwordpress_plugin"] = self["webpackChunkwordpress_plugin"] || []).push([["/js/frontend"],{
+(self["webpackChunksiample_image_slider"] = self["webpackChunksiample_image_slider"] || []).push([["/js/frontend"],{
 
 /***/ "./src/frontend/frontend.js":
 /*!**********************************!*\
@@ -14,7 +14,7 @@
   \**********************************/
 /***/ (() => {
 
-eval("//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sInNvdXJjZXMiOlsid2VicGFjazovL3dvcmRwcmVzc19wbHVnaW4vLi9zcmMvZnJvbnRlbmQvZnJvbnRlbmQuanM/ZmRkYyJdLCJzb3VyY2VzQ29udGVudCI6WyIiXSwibWFwcGluZ3MiOiIiLCJmaWxlIjoiLi9zcmMvZnJvbnRlbmQvZnJvbnRlbmQuanMuanMiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/frontend/frontend.js\n");
+eval("//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sInNvdXJjZXMiOlsid2VicGFjazovL3NpYW1wbGUtaW1hZ2Utc2xpZGVyLy4vc3JjL2Zyb250ZW5kL2Zyb250ZW5kLmpzP2ZkZGMiXSwic291cmNlc0NvbnRlbnQiOlsiIl0sIm1hcHBpbmdzIjoiIiwiZmlsZSI6Ii4vc3JjL2Zyb250ZW5kL2Zyb250ZW5kLmpzLmpzIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/frontend/frontend.js\n");
 
 /***/ })
 

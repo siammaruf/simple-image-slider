@@ -1,17 +1,16 @@
 import { createRouter, createWebHistory } from "vue-router";
-import GeneralTab from "./components/tabs/GeneralTab.vue";
-import AnotherTab from "./components/tabs/AnotherTab.vue";
-import Navigation from "./components/tabs/Navigation.vue";
+import Sliders from "./components/pages/Sliders.vue";
 import Settings from "./components/pages/Settings.vue";
 import About from "./components/pages/About.vue";
+import AddSlider from "./components/pages/AddSlider";
 
-const basePath = `${cfadminObj.adminUrl}/admin.php?page=cf-vue-kickstart#`;
+const basePath = `${cfadminObj.adminUrl}/admin.php?page=cf-kc-simple-slider#`;
 
 const routes = [
-    { path: '/', name:'Main', components: { default: GeneralTab, tab: Navigation } },
-    { path: '/another',name:'Tabs', components: { default: AnotherTab, tab: Navigation } },
+    { path: '/',name:'main', components: { default: Sliders } },
     { path: '/settings',name:'Settings', components: { default: Settings } },
     { path: '/about',name:'About', components: { default: About } },
+    { path: '/add',name:'add', components: { default: AddSlider } },
 ]
 
 const router = createRouter({

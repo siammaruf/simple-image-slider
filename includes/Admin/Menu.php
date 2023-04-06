@@ -27,13 +27,13 @@ class Menu{
 			$capability,
 			$slug,
 			[ $this, "menu_page_template" ],
-			'dashicons-buddicons-replies'
+			CF_PLUGIN_ASSETS.'/images/plugin-icon.png'
 		);
 
 		if (current_user_can($capability)){
 			$submenu[ $slug ][] = [ __("All Sliders","kcs"), $capability, "admin.php?page=". $slug ."#/" ];
-			$submenu[ $slug ][] = [ __("Settings","kcs"), $capability, "admin.php?page=". $slug ."#/settings" ];
-			$submenu[ $slug ][] = [ __("About","kcs"), $capability, "admin.php?page=". $slug ."#/about" ];
+			//$submenu[ $slug ][] = [ __("Settings","kcs"), $capability, "admin.php?page=". $slug ."#/settings" ];
+			//$submenu[ $slug ][] = [ __("About","kcs"), $capability, "admin.php?page=". $slug ."#/about" ];
 		}
 	}
 
