@@ -11,7 +11,7 @@ class PostTypes{
 	public function __construct()
 	{
 		add_action( 'init', [$this, 'custom_post_type'], 0 );
-		//add_action('admin_menu', [$this, 'hide_slider_menu'], 11);
+		add_action('admin_menu', [$this, 'hide_slider_menu'], 11);
 	}
 	/**
 	 * Create Custom Post Types
