@@ -134,6 +134,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 15px;
 }
 .kcs-row .slide-item-wrap .slide-item-holder,
 .kcs-slide-items-wrap .slide-item-wrap .slide-item-holder {
@@ -148,7 +149,7 @@
 .kcs-row .slide-item-wrap .slide-item-holder span.kcs-sub-title,
 .kcs-slide-items-wrap .slide-item-wrap .slide-item-holder span.kcs-sub-title {
   font-size: 8px;
-  line-height: 5px;
+  line-height: 8px;
 }
 .kcs-row .slide-item-wrap .slide-item-holder span.kcs-title,
 .kcs-slide-items-wrap .slide-item-wrap .slide-item-holder span.kcs-title {
@@ -159,8 +160,12 @@
   font-size: 8px;
   background: #0d66c2;
   border-radius: 3px;
+  max-width: 100px;
+  margin: 0 auto;
 }
+.kcs-row .slide-item-wrap .kcs-edit-btn,
 .kcs-row .slide-item-wrap .kcs-delete-btn,
+.kcs-slide-items-wrap .slide-item-wrap .kcs-edit-btn,
 .kcs-slide-items-wrap .slide-item-wrap .kcs-delete-btn {
   position: absolute;
   top: 0;
@@ -169,10 +174,21 @@
   text-decoration: none;
   padding: 10px;
   z-index: 20;
+  cursor: pointer;
 }
+.kcs-row .slide-item-wrap .kcs-edit-btn span,
 .kcs-row .slide-item-wrap .kcs-delete-btn span,
+.kcs-slide-items-wrap .slide-item-wrap .kcs-edit-btn span,
 .kcs-slide-items-wrap .slide-item-wrap .kcs-delete-btn span {
   color: #ea2424;
+}
+.kcs-row .slide-item-wrap .kcs-edit-btn,
+.kcs-slide-items-wrap .slide-item-wrap .kcs-edit-btn {
+  right: 41px;
+}
+.kcs-row .slide-item-wrap .kcs-edit-btn span,
+.kcs-slide-items-wrap .slide-item-wrap .kcs-edit-btn span {
+  color: #0bf332;
 }
 .kcs-row .slide-item-wrap:before,
 .kcs-slide-items-wrap .slide-item-wrap:before {

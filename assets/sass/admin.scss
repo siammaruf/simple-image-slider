@@ -113,6 +113,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 15px;
     .slide-item-holder{
       position: relative;
       span{
@@ -121,7 +122,7 @@
         text-align: center;
         &.kcs-sub-title{
           font-size: 8px;
-          line-height: 5px;
+          line-height: 8px;
         }
         &.kcs-title{
           font-size: 10px;
@@ -130,9 +131,12 @@
           font-size: 8px;
           background: #0d66c2;
           border-radius: 3px;
+          max-width: 100px;
+          margin: 0 auto;
         }
       }
     }
+    .kcs-edit-btn,
     .kcs-delete-btn{
       position: absolute;
       top: 0;
@@ -141,8 +145,15 @@
       text-decoration: none;
       padding: 10px;
       z-index: 20;
+      cursor: pointer;
       span{
         color: #ea2424;
+      }
+    }
+    .kcs-edit-btn{
+      right: 41px;
+      span{
+        color: #0bf332;
       }
     }
     &:before{

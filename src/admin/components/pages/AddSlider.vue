@@ -2,7 +2,7 @@
   <div id="kcs-add-slider-container">
     <div class="kcs-page-title kcs-d-flex">
       <router-link to="/" class="kcs-back-btn"><span class="dashicons dashicons-arrow-left-alt"></span></router-link>
-      <h2>Create Slide : {{this.kcsTitle}}</h2>
+      <h2>{{this.kcsTitle}}</h2>
       <input type="hidden" v-model="kcsTitle">
     </div>
     <div class="kcs-slide-items-wrap">
@@ -13,6 +13,9 @@
             <span class="kcs-title">{{field.title}}</span>
             <span class="kcs-btn">{{field.btnText}}</span>
           </div>
+          <a class="kcs-edit-btn" @click="kcsEditSlide($event, field.id)">
+            <span class="dashicons dashicons-edit"></span>
+          </a>
           <a class="kcs-delete-btn" @click="kcsDeleteSlide($event, field.id)">
             <span class="dashicons dashicons-trash"></span>
           </a>
@@ -63,7 +66,7 @@
             </div>
           </div>
           <div class="kcs-button-wrap">
-            <button class="button button-primary kcs-modal-form-button">Add Slide</button>
+            <button class="button button-primary kcs-modal-form-button">{{this.slideSaveBtnText}}</button>
             <a class="btn-close" @click="kcsCloseModal">
               <span class="dashicons dashicons-no-alt"></span>
             </a>
@@ -85,6 +88,8 @@ export default {
       fields: [],
       formData:{},
       kcsTitle: this.$route.query.title,
+      slideSaveBtnText: 'Add Slide',
+      slideId: ''
     }
   },
   mounted() {
@@ -117,21 +122,32 @@ export default {
   methods:{
     ...mapActions(["SAVE_SLIDER","FETCH_SLIDER","UPDATE_SLIDER_DATA"]),
     saveSlider(value){
-      this.fields.push(
-          {
-            id: this.fields.length+1,
-            title: this.formData.kcsSliderTitle,
-            subTitle: this.formData.kcsSliderSubTitle,
-            btnText: this.formData.kcsSliderBtnText,
-            btnLink: this.formData.kcsSliderBtnLink,
-            imgLink: this.formData.kcsSliderImage,
-          }
-      );
+      if (this.slideId === ''){
+        this.fields.push(
+            {
+              id: this.fields.length+1,
+              title: this.formData.kcsSliderTitle,
+              subTitle: this.formData.kcsSliderSubTitle,
+              btnText: this.formData.kcsSliderBtnText,
+              btnLink: this.formData.kcsSliderBtnLink,
+              imgLink: this.formData.kcsSliderImage,
+            }
+        );
+      }else{
+        const data = this.fields.find(obj=>obj.id === this.slideId);
+        const index = this.fields.indexOf(data);
+        this.fields[index].title = this.formData.kcsSliderTitle;
+        this.fields[index].subTitle = this.formData.kcsSliderSubTitle;
+        this.fields[index].btnText = this.formData.kcsSliderBtnText;
+        this.fields[index].btnLink = this.formData.kcsSliderBtnLink;
+        this.fields[index].imgLink = this.formData.kcsSliderImage;
+      }
       this.$refs.kcsModal.style.display = 'none';
       this.formData = {};
     },
     selectImage,
     kcsOpenModal(){
+      this.slideSaveBtnText = 'Save slide';
       this.$refs.kcsModal.style.display = 'table';
     },
     kcsCloseModal(){
@@ -167,7 +183,6 @@ export default {
               });
             }
           }, 100);
-
         }
       });
     },
@@ -176,12 +191,37 @@ export default {
         this.FETCH_SLIDER(this.$route.query.id)
       }
     },
+    kcsEditSlide(event, id){
+      const data = this.fields.find(obj=>obj.id === id);
+
+      this.slideId = id;
+      this.slideSaveBtnText = 'Update slide';
+      this.formData.kcsSliderTitle = data.title;
+      this.formData.kcsSliderSubTitle = data.subTitle;
+      this.formData.kcsSliderBtnText = data.btnText;
+      this.formData.kcsSliderBtnLink = data.btnLink;
+      this.formData.kcsSliderImage = data.imgLink;
+
+      this.$refs.kcsModal.style.display = 'table';
+    },
     kcsDeleteSlide(event, id){
       const found = this.fields.find( obj => obj.id === id);
       const index = this.fields.indexOf(found);
-      if (index > -1){
-        this.fields.splice(index,1)
-      }
+      this.$swal({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Yes, delete it!',
+        cancelButtonText: 'No, cancel!',
+        reverseButtons: true
+      }).then((result)=>{
+        if (result.isConfirmed) {
+          if (index > -1){
+            this.fields.splice(index,1)
+          }
+        }
+      });
     },
     titleValidate(value){
       if (!value) {
