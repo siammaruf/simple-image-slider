@@ -1,9 +1,12 @@
 <template>
   <div id="kcs-add-slider-container">
-    <div class="kcs-page-title kcs-d-flex">
+    <div class="kcs-page-title kcs-d-flex kcs-el-center">
       <router-link to="/" class="kcs-back-btn"><span class="dashicons dashicons-arrow-left-alt"></span></router-link>
       <h2>{{this.kcsTitle}}</h2>
       <input type="hidden" v-model="kcsTitle">
+      <div class="loading-text" :class="{active: this.loadingText.status === 'pending'}">
+        <span>Loading ...</span>
+      </div>
     </div>
     <div class="kcs-slide-items-wrap">
       <div class="slide-item" v-for="field in fields" key="field.id">

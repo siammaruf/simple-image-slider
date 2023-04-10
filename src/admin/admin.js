@@ -9,4 +9,4 @@ const app = createApp( App );
 app.use(router);
 app.use(store);
 app.use(VueSweetalert2);
-app.mount("#cf-admin-app");
+app.mount("#cf-kcs-admin-app");

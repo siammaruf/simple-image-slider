@@ -1,9 +1,14 @@
 <template>
   <div id="kcs-main-page" :style="kcsMainPageStyle">
-    <h1>All Sliders</h1>
-    <div class="kcs-d-block">
-      <div class="kcs-add-slider-btn-wrap" v-if="sliders.length">
-        <a class="button button-primary" @click="goToCreteSlider">Create New Slider</a>
+    <div class="kcs-d-flex kcs-el-center">
+      <h1 class="kcs-page-title">All Sliders</h1>
+      <div class="kcs-d-block">
+        <div class="kcs-add-slider-btn-wrap" v-if="sliders.length">
+          <a class="button button-primary" @click="goToCreteSlider">Create New Slider</a>
+        </div>
+      </div>
+      <div class="loading-text" :class="{active:this.loadingText.status === 'pending'}">
+        <span>Loading ...</span>
       </div>
     </div>
     <div class="kcs-add-slider-btn-wrap-container" v-if="!sliders.length">

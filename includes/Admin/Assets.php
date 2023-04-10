@@ -6,7 +6,9 @@ use Cofixer\KC\Slider\Helpers\AssetsHelpers;
 
 class Assets{
 	public function __construct(){
-		add_action("admin_enqueue_scripts",[$this,'register_all_scripts']);
+		if (isset($_GET['page']) & $_GET['page'] == 'cf-kc-simple-slider' ){
+			add_action("admin_enqueue_scripts",[$this,'register_all_scripts']);
+		}
 	}
 
 	/**

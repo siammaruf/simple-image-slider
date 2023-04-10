@@ -332,8 +332,25 @@
   padding-right: 10px;
 }
 
+.loading-text {
+  display: none;
+}
+.loading-text.active {
+  display: block;
+  margin-left: 10px;
+}
+
 .kcs-err-msg {
   margin-bottom: 3px;
   color: #ff1717;
   display: block;
+}
+
+.kcs-el-center {
+  align-items: center;
+}
+
+.kcs-page-title {
+  padding: 10px 0 !important;
+  margin-right: 15px !important;
 }

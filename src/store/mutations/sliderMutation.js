@@ -5,6 +5,18 @@ const sliderMutations = {
     UPDATE_SLIDER:( state, payload ) => {
         state.slider = payload
     },
+    FETCHED: ( state ) => {
+        state.loadingText = {
+            status:'success',
+            message: 'Load successfully !'
+        };
+    },
+    FETCHING: ( state )=>{
+        state.loadingText = {
+            status:'pending',
+            message: 'Please wait! data is loading ...'
+        };
+    },
     SAVED: ( state ) => {
         state.loadingText = {
             status:'success',

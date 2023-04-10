@@ -42,6 +42,6 @@ class Menu{
 	 * @return void
 	 */
 	public function menu_page_template(): void{
-		echo "<div class='wrap'><div id='cf-admin-app'></div></div>";
+		echo "<div class='wrap'><div id='cf-kcs-admin-app'></div></div>";
 	}
 }

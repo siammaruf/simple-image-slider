@@ -5,10 +5,12 @@ import {baseApiUrl, apiHeader} from "../config";
 const slides =  `${baseApiUrl}/cofixer/kcs/v1/sliders`;
 
 const getSliders = async ({commit}, payload) => {
+    commit('FETCHING')
     try {
         const response = await Axios.get(slides,{ headers: apiHeader });
         payload = response.data;
         commit('UPDATE_SLIDERS', payload)
+        commit('FETCHED')
     }catch (e) {
         console.log(e.message)
     }
@@ -38,10 +40,12 @@ const postSliders = async ({commit}, payload) => {
 }
 
 const getSlideData = async ({commit}, payload) => {
+    commit('FETCHING')
     try {
         const response = await Axios.get(`${slides}/${payload}`,{ headers: apiHeader });
         payload = response.data;
         commit('UPDATE_SLIDER', payload);
+        commit('FETCHED')
     }catch (e) {
         console.log(e.message)
     }

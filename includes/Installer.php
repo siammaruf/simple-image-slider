@@ -20,12 +20,12 @@ class Installer{
 	 * Add time and version on DB
 	 */
 	public function add_version(): void{
-		$installed = get_option( 'wd_academy_installed' );
+		$installed = get_option( 'cf_kcs_installed' );
 
 		if ( ! $installed ) {
-			update_option( 'wd_academy_installed', time() );
+			update_option( 'cf_kcs_installed', time() );
 		}
 
-		update_option( 'wd_academy_version', CF_PLUGIN_VERSION );
+		update_option( 'cf_kcs_version', CF_PLUGIN_VERSION );
 	}
 }
